@@ -1,9 +1,11 @@
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Headings */
 h1,
 h2,
 h3,
@@ -13,163 +15,155 @@ h6 {
   font-weight: normal;
 }
 
+/* Body styles */
 body {
-  overflow-x: hidden;
+  overflow-x: hidden; /* 防止水平滾動 */
+  background-image: url("../pictures/1.jpg"); /* 背景圖片 */
+  background-size: cover; /* 確保圖片覆蓋整個頁面 */
+  background-position: center; /* 圖片居中 */
+  background-repeat: no-repeat; /* 防止圖片重複 */
 }
+/* Navigation styles */
 body nav {
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 5;
+  background-color: #93b4b6; /* Background color for nav */
+  position: sticky; /* Sticky positioning */
+  top: 0; /* Stick to the top */
+  z-index: 5; /* Layering */
 }
 body nav ul {
-  display: flex;
+  display: flex; /* Flexbox for nav items */
 }
 body nav ul li {
-  list-style-type: none;
-  margin: 1rem;
+  list-style-type: none; /* Remove list bullets */
+  margin: 1rem; /* Spacing between items */
 }
 body nav ul li a {
-  color: black;
-  text-decoration: none;
-  transition: all 0.1s ease;
+  color: black; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.1s ease; /* Smooth transition */
 }
 body nav ul li a:hover {
-  color: rgb(54, 212, 138);
-}
-body main section.main-area {
-  min-height: 70vh;
-  background-color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-body main section.main-area div.info {
-  flex-basis: 450px;
-  padding: 1rem;
-}
-body main section.main-area div.info h1 {
-  font-size: 3.5rem;
-}
-body main section.main-area div.info h2 {
-  font-size: 1rem;
-}
-body main section.main-area div.info a {
-  color: white;
-  background-color: rgb(54, 212, 138);
-  padding: 0.25rem 0.5rem;
-  font-size: 1.5rem;
-  border-radius: 20px;
-  display: inline-block;
-  margin-top: 2rem;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-body main section.main-area div.info a:hover {
-  transform: scale(1.2);
-}
-body main section.main-area div.img-area {
-  flex-basis: 450px;
-}
-body main section.main-area div.img-area img {
-  width: 100%;
-}
-body main section.about-me {
-  background-color: rgb(231, 255, 233);
-  padding: 5rem 0rem;
-  display: flex;
-  justify-content: center;
-}
-body main section.about-me section.description {
-  width: 50%;
-  text-align: center;
-}
-body main section.about-me section.description h2 {
-  font-size: 2rem;
-}
-body main section.about-me section.description .progress-bar-area p {
-  margin-top: 1rem;
-}
-body main section.resume {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2rem;
-}
-body main section.resume section.table {
-  flex: 5 0 500px;
-  padding: 2rem;
-}
-body main section.resume section.table table {
-  --bs-table-bg: none;
-  border-collapse: collapse;
-}
-body main section.resume section.table table tr {
-  border-bottom: 2px solid gray;
-  transition: all 0.2s ease;
-}
-body main section.resume section.table table tr:hover {
-  background-color: rgb(184, 255, 222);
-}
-body main section.resume section.table table tr td {
-  padding: 1rem;
-}
-body main section.resume section.picture {
-  flex: 1 1 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-body main section.resume section.picture img {
-  width: 80%;
-}
-body main section.resume section.picture div.greenRect {
-  width: 30vw;
-  height: 90vh;
-  border: 10px solid rgb(195, 255, 200);
-  position: absolute;
-  top: 30px;
-  left: 80px;
-  z-index: -1;
-}
-body main section.resume section.picture div.greenRect2 {
-  width: 50vw;
-  height: 40vh;
-  border: 10px solid rgb(195, 255, 200);
-  position: absolute;
-  top: 300px;
-  left: -300px;
-  z-index: -1;
-}
-body main section.resume section.picture div.greenRect3 {
-  width: 50vw;
-  height: 40vh;
-  border: 10px solid rgb(195, 255, 200);
-  position: absolute;
-  top: 0px;
-  left: -100px;
-  z-index: -1;
+  color: rgb(5, 9, 212); /* Hover color */
 }
 
-@media screen and (max-width: 800px) {
-  body main section.about-me section.description {
-    width: 80%;
-  }
-  body main section.resume {
-    overflow-x: auto;
-  }
-  body main section.resume section.picture div.greenRect,
-  body main section.resume section.picture div.greenRect2,
-  body main section.resume section.picture div.greenRect3 {
-    display: none;
-  }
+/* Main area styles */
+body main section.main-area {
+  min-height: 70vh; /* Minimum height */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
+/* 中間的文字自動左右拉伸 */
+body main section.main-area div.info {
+  flex: 1; /* 讓文字區域自動拉伸 */
+  padding: 1rem;
+  max-width: 800px; /* 最大寬度限制 */
+  min-width: 300px; /* 最小寬度限制 */
+}
+
+body main section.main-area div.info h1 {
+  font-size: 3.5rem; /* Font size for main heading */
+}
+
+body main section.main-area div.info h2 {
+  font-size: 1rem; /* Font size for subheading */
+}
+
+body main section.main-area div.info a {
+  color: black; /* Link color */
+  background-color: rgb(54, 151, 212); /* Background color for button */
+  padding: 5rem 0.5rem; /* Padding */
+  font-size: 1.5rem; /* Font size */
+  border-radius: 20px; /* Rounded corners */
+  display: inline-block; /* Inline block for button */
+  margin-top: 2rem; /* Margin above button */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.2s ease; /* Smooth transition */
+}
+
+body main section.main-area div.info a:hover {
+  transform: scale(1.2); /* Scale effect on hover */
+}
+
+body main section.main-area div.img-area {
+  flex-basis: 450px; /* Base width for image area */
+}
+
+body main section.main-area div.img-area img {
+  width: 100%; /* Full width for images */
+  border-radius: 20%; /* 使圖片變成圓形 */
+  object-fit: cover; /* 保持圖片內容比例不變 */
+}
+
+/* Resume section styles */
+body main section.resume {
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Wrap items */
+  padding: 2rem; /* Padding */
+}
+body main section.resume section.table {
+  flex: 5 0 300px; /* Flex properties for table */
+  padding: 2rem; /* Padding */
+}
+body main section.resume section.table table {
+  --bs-table-bg: none; /* Table background */
+  border-collapse: collapse; /* Collapse borders */
+}
+
+body main section.resume section.table table tr {
+  border-bottom: 2px solid gray; /* Bottom border for rows */
+  transition: all 0.2s ease; /* Smooth transition */
+  line-height: 1.2rem; /* 調整行距 */
+}
+
+body main section.resume section.table table tr:hover {
+  background-color: rgb(184, 240, 255); /* Hover background color */
+}
+body main section.resume section.table table tr td {
+  padding: 1rem; /* 減少單元格的內間距 */
+  line-height: 1.5; /* 設置行高為1.5倍 */
+}
+
 @media screen and (max-width: 500px) {
   body nav {
-    position: static;
+    position: static; /* Static positioning for nav */
   }
   body nav ul {
-    flex-direction: column;
+    flex-direction: column; /* Stack nav items vertically */
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/* 調整專長部分的圖標和文字排列 */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: last baseline;
+}
+
+.skill-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* 增加圖標之間的間距 */
+}
+
+.skill-text {
+  display: flex;
+  justify-content: last baseline;
+  flex-wrap: wrap;
+  gap: 100px; /* 增加文字之間的間距 */
+  width: 100%;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.skill-icons img {
+  width: 50px; /* 圖標大小 */
+  height: auto;
+}
+
+.skill-text span {
+  font-size: 1rem; /* 調整文字大小 */
+  display: inline-block;
+}
